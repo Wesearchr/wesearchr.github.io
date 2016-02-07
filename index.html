@@ -1,1 +1,112 @@
-Hello world
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Wesearchr | An Information Marketplace</title>
+  <meta charset="utf-8"></meta>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  
+  <meta name="description" content="Wesearcher, an information marketplace by Charles Johnson and Pax Dickinson.">
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@wesearchr" />
+  <meta name="twitter:title" content="Wesearchr | An Information Marketplace" />
+  <meta name="twitter:description" content="Coming this spring. Join our mailing list for updates." />
+  <meta name="twitter:image" content="http://www.wesearchr.com/logo.png" />
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    #cover,body,html{position:relative}.btn-danger,.btn-danger:focus,.btn-danger:hover{color:#fff;text-shadow:none;background-color:#fa9132;border:1px solid #fa9132}body,html{height:100%}a.navbar-brand{padding:9px 0;margin:0;width:117px}a.navbar-brand img{max-height:99%;margin:0}#cover{z-index:1000}.cover{padding:0 20px}.cover-heading{font-size:600%}.cover-heading img{max-width:320px;padding-bottom:21px}.cover .btn-lg{padding:10px 20px;font-weight:700}.fade-in>h1,.fade-in>h2,.lead{margin-top:0}.site-wrapper{text-align:center;display:table;width:100%;height:100%;min-height:100%}.site-wrapper-inner{display:table-cell;vertical-align:top}.cover-container{margin-right:auto;margin-left:auto}.inner{padding:30px}.form-notify{max-width:330px;margin:0 auto}.form-notify .checkbox,.form-notify .form-notify-heading{margin-bottom:10px}.form-notify .checkbox{font-weight:400}.form-notify .form-control{position:relative;height:auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:10px;font-size:16px}.form-notify .form-control:focus{z-index:2}.form-notify input[type=email]{margin-bottom:9px}.soc a{display:inline-block;width:21%;height:36px;font-size:120%;background-image:url(social-media-sprite.png);background-repeat:no-repeat;background-size:36px 72px;padding-top:6px;padding-left:42px;margin-top:36px;text-align:left}.soc a:first-child{background-position:0 0;margin-right:1%}.soc a:last-child{background-position:0 100%;margin-left:1%}.fade-in{padding-top:45px}.fade-in:first-child{padding-top:0}.appear{animation:fadein 1s;-moz-animation:fadein 1s;-webkit-animation:fadein 1s;-o-animation:fadein 1s}@keyframes fadein{from{opacity:0;margin-top:18px}to{opacity:1;margin-top:0}}@-moz-keyframes fadein{from{opacity:0;margin-top:18px}to{opacity:1;margin-top:0}}@-webkit-keyframes fadein{from{opacity:0;margin-top:18px}to{opacity:1;margin-top:0}}@-o-keyframes fadein{from{opacity:0;margin-top:18px}to{opacity:1;margin-top:0}}@media (min-width:441px) and (max-width:900px){.form-notify{margin:0 auto}}@media (min-width:768px){.cover-container{width:100%}}@media (max-width:991px){#team .row img{max-width:27%;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}}@media (min-width:992px){.cover-container{width:700px}#team .row img{max-width:100%}#team .row h3{margin-top:0}}  </style>
+
+</head>
+<body data-spy="scroll" data-target=".wesearchr-navbar">
+
+    <div id="cover" class="site-wrapper mypage">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover fade-in">
+
+            <h1 class="cover-heading"><img src="logo.png" alt="wesearchr" /></h1>
+
+            <p class="lead">An Information Marketplace</p>
+  
+            <p class="lead">
+               <a href="http://gotnews.com/">Charles Johnson</a>, CEO <br />
+               <a href="https://paxdickinson.wordpress.com/about/">Pax Dickinson</a>, CTO 
+             
+            </p>   
+             
+            <p class="lead">Coming This Spring</p>
+            <br />
+
+            <form action="https://wesearchr.us12.list-manage.com/subscribe/post?u=1f612601e2fac47f95162d6b2&amp;id=714e8543fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-notify" target="_blank" validate>
+
+              <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email Address" required>
+              <input type="submit" value="I Consent to Inbox Penetration" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-danger btn-block">
+            </form>
+
+            <div class="soc">
+              <a href="https://twitter.com/Wesearchr" target="_blank">Twitter</a>
+              <a href="https://www.facebook.com/WeSearchr-941685165908402/" target="_blank">Facebook</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script id="fadeInScripts" type="text/javascript">
+
+  $(".fade-in").children().css('visibility', 'hidden');
+
+  var fadeIn = function (elem) {
+    // elem.children().css('visibility', 'hidden')
+    if(elem.children().css('visibility') == 'hidden') 
+    {
+      var fadein = function (s, d) {
+          setTimeout(function () {
+              s.css('visibility', 'visible')
+              s.addClass('appear');
+          }, d);
+      }
+
+      var fInt = 0;
+
+      elem.children().each(function () {
+          if ($(this).css('visibility') == 'hidden') {
+              fInt += 300;
+              fadein($(this), fInt)
+          }
+      });
+    }
+  }
+
+  fadeIn($("#cover .fade-in"))
+</script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73373753-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</html>
