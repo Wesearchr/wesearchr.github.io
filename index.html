@@ -17,302 +17,7 @@
   
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
-  <style type="text/css">
-    /*
-     * Globals
-     */
-
-
-    /* Custom default button */
-    .btn-danger,
-    .btn-danger:hover,
-    .btn-danger:focus {
-      color: #fff;
-      text-shadow: none; 
-      background-color: #fa9132;
-      border: 1px solid #fa9132;
-    }
-
-
-    /*
-     * Base structure
-     */
-
-    html,
-    body {
-      height: 100%;
-      /*background-color: #ccc;*/
-      position: relative;
-    }
-
-    /*
-     * Header
-     */
-
-    a.navbar-brand {
-      /*color: #fff !important;*/
-      padding: 9px 0;
-      margin: 0;
-      width: 117px;
-    }
-    a.navbar-brand img {
-      max-height: 99%;
-      margin: 0;
-    }
-
-
-    /*
-     * Cover
-     */
-
-    #cover {
-      z-index: 1000;
-      position: relative;
-     }
-    .cover {
-      padding: 0 20px;
-    }
-    .cover-heading {
-      font-size: 600%;
-    }
-    .cover-heading img {
-      max-width: 320px;
-      padding-bottom: 21px;
-    }
-    .cover .btn-lg {
-      padding: 10px 20px;
-      font-weight: bold;
-    }
-    .fade-in > h1,
-    .fade-in > h2,
-    .lead {
-      margin-top: 0;
-    }
-
-    /* Extra markup and styles for table-esque vertical and horizontal centering */
-    .site-wrapper {
-      text-align: center;
-/*      color: #fff;
-      text-shadow: 0 1px 3px rgba(0,0,0,.5);
-*/      display: table;
-      width: 100%;
-      height: 100%; /* For at least Firefox */
-      min-height: 100%;
-      /*background-color: #333;
-      -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-              box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-    }
-    .site-wrapper-inner {
-      display: table-cell;
-      vertical-align: top;
-    }
-    .cover-container {
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    /* Padding for spacing */
-    .inner {
-      padding: 30px;
-    }
-
-
-    /*
-     * Mailchimp form
-     */
-
-    .form-notify {
-      max-width: 330px;
-      /*padding: 15px;*/
-      /*margin: 18% auto;*/
-      margin: 0 auto;
-    }
-    .form-notify .form-notify-heading,
-    .form-notify .checkbox {
-      margin-bottom: 10px;
-    }
-    .form-notify .checkbox {
-      font-weight: normal;
-    }
-    .form-notify .form-control {
-      position: relative;
-      height: auto;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
-      padding: 10px;
-      font-size: 16px;
-    }
-    .form-notify .form-control:focus {
-      z-index: 2;
-    }
-    .form-notify #inputName {
-      /*margin-top: 10px;*/
-      /*margin-bottom: -1px;*/
-      /*border-bottom-left-radius: 0;*/
-      /*border-bottom-right-radius: 0;*/
-    }
-    .form-notify input[type="email"] {
-      margin-bottom: 9px;
-    }
-
-
-    /*
-     * social media icons
-     */
-    .soc a {
-      display: inline-block;
-      width: 144px;
-      height: 36px;
-      font-size: 120%;
-      background-image: url('social-media-sprite.png');
-      background-repeat: no-repeat;
-      background-size: 36px 72px;
-      padding-top: 6px;
-      padding-left: 42px;
-      margin-top: 36px;
-      text-align: left;
-      /*border: 1px dashed #ccc;*/
-    }
-    .soc a:first-child {
-      background-position: 0 0;
-      margin-right: 1%;
-    }
-    .soc a:last-child {
-      background-position: 0 100%;
-      margin-left: 1%;
-    }
-    
-
-    /*
-     * Animations and Transitions
-     */
-
-    .fade-in {
-      padding-top: 45px;
-    }
-    .fade-in:first-child {
-      padding-top: 0;
-    }
-    .appear {
-        animation: fadein 1s;
-        -moz-animation: fadein 1s;
-        /* Firefox */
-        -webkit-animation: fadein 1s;
-        /* Safari and Chrome */
-        -o-animation: fadein 1s;
-        /* Opera */
-    }
-    @keyframes fadein {
-        from {
-            opacity:0;
-            margin-top: 18px;
-        }
-        to {
-            opacity:1;
-            margin-top: 0px;
-        }
-    }
-    @-moz-keyframes fadein {
-        /* Firefox */
-        from {
-            opacity:0;
-            margin-top: 18px;
-        }
-        to {
-            opacity:1;
-            margin-top: 0px;
-        }
-    }
-    @-webkit-keyframes fadein {
-        /* Safari and Chrome */
-        from {
-            opacity:0;
-            margin-top: 18px;
-        }
-        to {
-            opacity:1;
-            margin-top: 0px;
-        }
-    }
-    @-o-keyframes fadein {
-        /* Opera */
-        from {
-            opacity:0;
-            margin-top: 18px;
-        }
-        to {
-            opacity: 1;
-            margin-top: 0px;
-        }
-    }
-
-
-    /*
-     * Mobile Styles
-     */
-
-    @media (min-width: 441px) and (max-width: 900px) {
-      .form-notify {
-        margin: 0 auto;
-      }
-    }
-/*    @media (max-width: 1010px) {
-      .soc a {
-        width: 21%;
-      }
-    }
-    @media (max-width: 900) {
-      .soc a {
-        width: 150px;
-        margin-left: 6px;
-      }
-    }
-    @media (max-width: 442px) {
-      .soc a {
-        width: 42%;
-      }
-    }
-*/
-    /*
-     * Affix and center
-     */
-
-    @media (min-width: 768px) {
-      /* Start the vertical centering */
-      .site-wrapper-inner {
-        /*vertical-align: middle;*/
-      }
-      /* Handle the widths */
-      .cover-container {
-        width: 100%; /* Must be percentage or pixels for horizontal alignment */
-      }
-    }
-
-    @media (max-width: 991px) {
-      .cover-container {
-        /*width: 700px;*/
-      }
-      #team .row img {
-        max-width: 27%;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .cover-container {
-        width: 700px;
-      }
-      #team .row img {
-        max-width: 100%;
-      }
-      #team .row h3 {
-        margin-top: 0;
-      }
-    }
-  </style>
+  <link href="assets/css/index.min.css" rel="stylesheet">
 
 </head>
 <body data-spy="scroll" data-target=".wesearchr-navbar">
@@ -325,37 +30,157 @@
 
           <div class="inner cover fade-in">
 
-            <h1 class="cover-heading"><img src="logo.png" alt="wesearchr" /></h1>
+            <h1 class="cover-heading"><img src="assets/img/logo.png" alt="wesearchr" /></h1>
 
             <p class="lead">An Information Marketplace</p>
   
-            <p class="lead">
-               <a href="http://gotnews.com/">Charles Johnson</a>, CEO <br />
-               <a href="https://paxdickinson.wordpress.com/about/">Pax Dickinson</a>, CTO 
-             
-            </p>   
-             
-            <p class="lead">Coming This Spring</p>
-            <br />
-
-            <form action="https://wesearchr.us12.list-manage.com/subscribe/post?u=1f612601e2fac47f95162d6b2&amp;id=714e8543fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-notify" target="_blank" validate>
-
-              <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email Address" required>
-              <input type="submit" value="I Consent to Inbox Penetration" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-danger btn-block">
-            </form>
-
-            <div class="soc">
-              <a href="https://twitter.com/Wesearchr" target="_blank">Twitter</a>
-              <a href="https://www.facebook.com/WeSearchr-941685165908402/" target="_blank">Facebook</a>
-            </div>
-
-          </div>
+         </div>
 
         </div>
 
       </div>
 
     </div>
+
+    <section id="faq">
+
+      <div class="container faq">
+
+        <h1>We are looking for a few good news people.</h1>
+
+        <p>WeSearchr is a new model for citizen journalism that uses crowdfunding and crowdsourcing to break the media monopoly on investigative research. WeSearchr is a tool for compensating whistleblowers and a vehicle for exposing the world's hidden truths.</p>
+
+        <p>WeSearchr can be used by amateur or professional journalists to leverage the combined financial strength of their personal audience in order to raise money and motivate the production or exposure of secret information.</p>
+
+        <p>We are looking for a few good <strong>News Askers</strong>, curious people with a nose for news that can surf the news cycle and predict what can (or will) be valuable news. Compensation is based on performance (read on).</p>
+
+        <h2>How does WeSearchr work?</h2>
+
+        <p>An approved <strong>Asker</strong> <strong>creates a Bounty</strong> to request some specific information.</p>
+
+        <div class="row">
+          <div class="col-md-4">
+
+            <img alt="" src="assets/img/3col1.png">
+
+            <strong>Evidence that some named politician is guilty of corruption or adultery.</strong>
+
+          </div>
+          <div class="col-md-4">
+
+            <img alt="" src="assets/img/3col2.png">
+
+            <strong>Photos or video involving a celebrity scandal.</strong>
+
+          </div>
+          <div class="col-md-4">
+
+            <img alt="" src="assets/img/3col3.png">
+
+            <strong>Proof of violations of securities law at a named public company.</strong>
+
+          </div>
+        </div>
+
+        <p>
+          A <strong>Bounty</strong> is a request for the publication of specific information that is of journalistic value.
+        </p>
+
+        <p>
+          Providing the <strong>Answer</strong> to the requested information results in a financial reward to the <strong>Researcher</strong> and the Asker.
+        </p>
+
+        <p>
+          The Bounty has a <strong>Deadline</strong>, after which the information is worthless.
+        </p>
+
+        <p>
+          Bounties are crowdfunded and have a <strong>Reserve</strong>, a minimum amount of money required to be raised.
+        </p>
+
+        <p>
+          After an <strong>Asker publishes a Bounty</strong>, anyone in the world can contribute money towards the Reserve via credit card, PayPal, or Bitcoin.
+        </p>
+
+        <p>
+          Anyone in the world can be a researcher and <strong>submit an Answer to the Bounty</strong>, providing documents, video or other evidence that fulfills the conditions of the Bounty.
+        </p>
+
+        <p>
+          When the Reserve is reached, we’ll start forwarding Answers to the Asker. They’ll review what’s received and determine if any Answer fulfills the Bounty conditions.
+        </p>
+
+        <p>
+          If an Answer is chosen and approved by WeSearchr’s senior editors, the Asker has the right to publish it in the outlet of their choice. If desired, WeSearchr can help find an appropriate outlet or self-publish the Answer.
+        </p>
+
+        <p>
+          Once the story has been published, we wait 30 days to ensure that no one has been hoaxed, and the Bounty award will be distributed.
+        </p>
+
+        <p>
+          75% of the money goes to the Researcher, who provided the Answer, 10% goes to the Asker for writing and promoting the Bounty, and WeSearchr keeps 15% for site costs, payment processing, and overhead.
+        </p>
+
+        <h3>What if the Bounty is never solved?</h3>
+
+        <p>If the Deadline runs out, all Contributors will be able to redistribute the money they donated to a different bounty of their choice.</p>
+
+        <h3>How can whistleblowers use WeSearchr?</h3>
+
+        <p>People with inside information about illegal activities can create a Bounty that describes the information that is being offered by the whistleblower, and set a Reserve funding goal to be met. If contributors meet the Reserve, WeSearchr will arrange for the information to be published by ourselves or another media outlet.</p>
+
+        <p>If you’re a whistleblower with relevant, newsworthy information, and you would like to use the Wesearchr platform, please contact us directly at <a href="mailto:whistleblowers@wesearchr.com">whistleblowers@wesearchr.com</a>.</p>
+
+        <h3>Can I use WeSearchr to dox or harass people?</h3>
+
+        <p>No. WeSearchr is a journalistic enterprise that publishes information of journalistic value that is in the public interest. Bounties seeking information that is not publishable or is not of any journalistic relevance will not be permitted. All bounties will be vetted by WeSearchr senior editors before being opened for contributions.</p>
+
+        <h3>How can I become an Asker?</h3>
+
+        <p>WeSearchr will be launched as a beta test, and to control the growth and scale of the site we will initially be selecting Askers from among those who apply. We plan to increase the number steadily as the site grows, and our vision is to be fully open to the world soon.</p>
+
+        <p>To apply, send an email to <a href="mailto:join@wesearchr.com">join@wesearchr.com</a> (click the button below) and include three examples of Bounties you would like to create on WeSearchr. Those with current publishing platforms of a professional or amateur nature will be preferred, but anyone with novel and interesting Bounty ideas could potentially be selected.</p>
+
+        <p style="text-align: center;padding: 6% 0;">
+          <a href="mailto:join@wesearchr.com?subject=Asker%20Application&body=Three%20bounties%20that%20I%20would%20like%20to%20create%20are%3A" class="btn btn-lg btn-danger apply">Apply to become an Asker</a>
+        </p>
+		
+    </section>
+
+    <section id="subscribe">
+
+        <div class="container subscribe">
+
+          <h3>Brought to you by <a href="http://gotnews.com/">Charles Johnson</a>, CEO 
+            <br />and <a href="https://paxdickinson.wordpress.com/about/">Pax Dickinson</a>, CTO.</h3>
+             
+          <h3>Coming This Spring</h3>
+
+          <form action="https://wesearchr.us12.list-manage.com/subscribe/post?u=1f612601e2fac47f95162d6b2&amp;id=714e8543fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-notify" target="_blank" validate>
+
+            <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email Address" required>
+            <input type="submit" value="Join Our Mailing List" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-danger btn-block">
+          </form>
+
+          <div class="soc">
+            <a href="https://twitter.com/Wesearchr" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/WeSearchr-941685165908402/" target="_blank">Facebook</a>
+          </div>
+          
+      </div>
+
+    </section>
+
+    <section id="fin">
+
+        <div class="container fin">
+
+          <img src="assets/img/orwell-1.jpg" alt="War is Peace. Freedom is Slavery. Ignorance is Strength. Let's change that. WeSearchr" />
+
+        </div>
+
+    </section>  
 
 </body>
 
